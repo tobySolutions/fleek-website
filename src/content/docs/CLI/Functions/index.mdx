@@ -5,6 +5,8 @@ date: 2024-05-23
 desc: The Fleek Functions are code snippets that are executed server-side using Fleek Network's on-chain cloud infrastructure.
 ---
 
+import FleekFunction from '@components/FleekFunction/FleekFunction';
+
 # Fleek Functions
 
 :::warn
@@ -131,6 +133,11 @@ The response should be similar to:
 ```
 
 Given that our function is a basic 'Hello World' program and doesn't require any parameters, visit the provided invoke URL to execute your function code. However, keep in mind that the functions are deployed into IPFS, requiring a grace period for propagation.
+
+<FleekFunction
+  client:load
+  functionUrl={'https://massive-rocket-late.functions.on-fleek.app'}
+/>
 
 ## List Fleek Functions
 
@@ -320,7 +327,7 @@ This is an experimental feature, performance will be impacted. We are actively w
 
 ## Deactivate functions
 
-To _deactivate_ such a Fleek Function, you can run the command below, replacing <fleek_function_name> with the name of the Fleek Function you’re deactivating.
+To _deactivate_ such a Fleek Function, you can run the command below, replacing < fleek_function_name > with the name of the Fleek Function you’re deactivating.
 
 To deactivate a Fleek Function, use the command below:
 

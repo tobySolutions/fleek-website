@@ -41,6 +41,7 @@ type ButtonProps = PropsWithChildren &
     className?: string;
     target?: Target;
     rel?: string;
+    disabled?: boolean;
     onClick?: (e?: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   };
 
@@ -54,6 +55,7 @@ export const Button: React.FC<ButtonProps> = ({
   variant,
   size,
   className,
+  disabled,
 }) => {
   if (href)
     return (
@@ -72,6 +74,7 @@ export const Button: React.FC<ButtonProps> = ({
     <button
       id={id}
       onClick={onClick}
+      disabled={disabled}
       className={cn(buttonVariants({ variant, size }), className)}
     >
       {children}
